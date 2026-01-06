@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rehman you are  taking to much bigger decision</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const rehman=function(){
+        console.log("I  am rehman ali ");
+    }
+    const  decision=function(){
+    document.querySelector("h1").innerHTML="i will do rehman";
+}
+    const refernce=setTimeout(decision,2000);
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearTimeout(refernce)
+        console.log("The time is undercontrole");
+            })
+</script>
+</html>
