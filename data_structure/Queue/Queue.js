@@ -1,4 +1,4 @@
-const { timeEnd } = require("node:console");
+
 
 class node{
     constructor(data){
@@ -12,10 +12,6 @@ class Quese{
     constructor(){
         this.head=null;
     }
-     insertstrt(newnode){
-         newnode.next=this.head;
-         this.head=newnode;
-     }
      push(newnode){
     if(this.head==null){
          this.head=newnode;
@@ -31,13 +27,16 @@ class Quese{
        }
        pop(){
         let temp=this.head;
+       if(temp==null){
+         return `Queue is empty`;
+       }else{}
         this.head=temp.next;
         return  temp.data;
        }
     front(){
-        // we want to get the front simply 
-         let temp=this.head;
-         this.head=temp.next;
+        // we want to get the front simply with out removing  
+         if(this.head) return null;
+         return this.head.data;
 }
 }
 let q=new Quese();
@@ -53,4 +52,11 @@ q.push(node3)
 q.push(node4)
 q.push(node5)
 q.push(node6);
+console.log(q.pop());
+console.log(q.pop());
+console.log(q.pop());
+console.log(q.pop());
+console.log(q.pop());
+console.log(q.pop());
+console.log(q.pop());
 
